@@ -9,10 +9,10 @@ require '../autoload.php';
 
 //session_start();
 //if(isset($_GET['cin'])) {
-// je crée une personne
+
     $utilisateur = new Utilisateur();
 if(isset($_GET['cin'])) {
-// j appelle la méthode update
+
     $user = $utilisateur->findByCin($_GET['cin']);
 }
 ?>

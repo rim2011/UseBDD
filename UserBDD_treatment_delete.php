@@ -7,9 +7,7 @@
  */
 require '../autoload.php';
 if(isset($_GET['cin'])) {
-// je crée une personne
     $utilisateur = new Utilisateur();
-// j appelle la méthode qui supprime
     $utilisateur->deleteUser($_GET['cin']);
 
     $utilisateurs = $utilisateur->findAll();
