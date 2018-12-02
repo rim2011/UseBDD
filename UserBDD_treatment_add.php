@@ -16,7 +16,13 @@ session_start();
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
     $age = $_POST['age'];
-    $utilisateur->addUser($cin,$nom,$prenom,$age);
+    if ($_POST['nom'] AND $_POST['prenom'] AND $_POST['age']){
+
+    $utilisateur->addUser($cin, $nom, $prenom, $age);
     echo "ajoute";
-    //header('location:../main.php');
-//}
+//header('location:../main.php');
+}
+else
+{
+    echo "Veuillez insérer votre nom ou prenom ou age";
+}
